@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Temperature Converter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="converter-container" role="main">
+    <h1>🌡️ Temperature Converter</h1>
+    <p class="lead">Choose conversion type, enter a number, then press <strong>Convert</strong> (or Enter).</p>
+
+    <div class="input-group">
+      <label class="visually-hidden" for="tempInput">Temperature</label>
+      <input id="tempInput" type="number" inputmode="numeric" placeholder="Enter temperature" />
+
+      <label class="visually-hidden" for="conversionType">Conversion type</label>
+      <select id="conversionType" aria-label="Conversion type">
+        <option value="CtoF">Celsius → Fahrenheit</option>
+        <option value="FtoC">Fahrenheit → Celsius</option>
+      </select>
+
+      <!-- note type="button" to avoid accidental form submits -->
+      <button id="convertBtn" type="button">Convert</button>
+    </div>
+
+    <div id="result" class="result-box" aria-live="polite">Result: --</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>Made with ❤️ • GitHub ready</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
